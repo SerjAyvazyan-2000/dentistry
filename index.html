@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>МЯТА — стоматология</title>
+  <meta name="description" content="Стоматология без боли: лечение под микроскопом, имплантация за 1 день, отбеливание, виниры, элайнеры. Бесплатная консультация и 3D-снимок, рассрочка 0%.">
+  <meta name="theme-color" content="#00a77f">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Шапка: всегда закреплена -->
+  <header class="header">
+    <a href="#top" class="logo">
+      <svg class="logo__tooth" viewBox="0 0 64 64" aria-hidden="true"><path d="M20 12c-7 0-11 6-10 13 1 6 4 8 5 15 1 6 2 12 6 12s4-7 5-11c1-4 3-5 6-5s5 1 6 5c1 4 1 11 5 11s5-6 6-12c1-7 4-9 5-15 1-7-3-13-10-13-5 0-7 2-12 2s-7-2-12-2z"/></svg>
+      <span><b data-brand></b><small data-tagline></small></span>
+    </a>
+    <nav class="nav" aria-label="Меню">
+      <a href="#map">Зубная карта</a>
+      <a href="#whitening">Отбеливание</a>
+      <a href="#services">Услуги</a>
+      <a href="#doctors">Врачи</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="header__phone" data-phone></a>
+    <a href="#book" class="btn btn--green btn--sm">Записаться</a>
+    <button class="burger" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="progress" aria-hidden="true"></div>
+  </header>
+
+  <main id="top">
+
+    <!-- 1. Первый экран -->
+    <section class="hero">
+      <div class="hero__text">
+        <p class="chip-label" data-hero-eyebrow></p>
+        <h1 class="hero__title" data-hero-title></h1>
+        <p class="hero__lead" data-hero-text></p>
+        <div class="hero__actions">
+          <a href="#book" class="btn btn--green"><span data-hero-cta></span><i class="arr">→</i></a>
+          <a href="#map" class="btn btn--soft">Рассчитать лечение</a>
+        </div>
+      </div>
+      <div class="hero__visual" data-hero-visual>
+        <div class="blob" aria-hidden="true"></div>
+        <svg class="big-tooth" viewBox="0 0 300 320" aria-hidden="true">
+          <defs>
+            <linearGradient id="tg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dff3ea"/></linearGradient>
+            <clipPath id="tclip"><path d="M95 30c-35 0-58 30-52 66 5 30 20 42 26 78 6 34 10 112 36 112s22-60 30-82c6-18 10-24 17-24s11 6 17 24c8 22 4 82 30 82s30-78 36-112c6-36 21-48 26-78 6-36-17-66-52-66-26 0-36 12-57 12s-31-12-57-12z"/></clipPath>
+          </defs>
+          <path class="big-tooth__body" d="M95 30c-35 0-58 30-52 66 5 30 20 42 26 78 6 34 10 112 36 112s22-60 30-82c6-18 10-24 17-24s11 6 17 24c8 22 4 82 30 82s30-78 36-112c6-36 21-48 26-78 6-36-17-66-52-66-26 0-36 12-57 12s-31-12-57-12z"/>
+          <g clip-path="url(#tclip)"><rect class="big-tooth__shine" x="-120" y="-20" width="60" height="400" transform="rotate(20)"/></g>
+          <g class="face"><circle class="eye" cx="118" cy="120" r="9"/><circle class="eye" cx="182" cy="120" r="9"/><path class="mouth" d="M120 160 Q150 190 180 160"/></g>
+        </svg>
+        <span class="spark spark--1">✦</span><span class="spark spark--2">✦</span><span class="spark spark--3">✦</span>
+        <div class="floaters" data-hero-chips></div>
+      </div>
+    </section>
+
+    <!-- 2. Бегущая строка -->
+    <div class="marquee" aria-hidden="true"><div class="marquee__track" data-marquee></div></div>
+
+    <!-- 3. Интерактивная зубная карта -->
+    <section class="section" id="map">
+      <header class="head">
+        <p class="kicker">01 · Зубная карта</p>
+        <h2 class="h2 reveal">Нажмите на зуб — <span class="mark">узнайте цену</span></h2>
+        <p class="lead">Выберите зуб, затем процедуру. Мы соберём предварительный план лечения и посчитаем сумму.</p>
+      </header>
+      <div class="jaw__grid">
+        <div class="jaw">
+          <svg viewBox="0 0 600 560" class="jaw__svg" data-jaw aria-label="Зубная карта"></svg>
+          <p class="jaw__legend"><span>Верхняя челюсть</span><span>Нижняя челюсть</span></p>
+        </div>
+        <div class="plan">
+          <div class="tooth-card" data-tooth-card>
+            <p class="tooth-card__hint">👆 Выберите зуб на схеме</p>
+          </div>
+          <div class="plan__box">
+            <div class="plan__head"><b>План лечения</b><button type="button" class="link-btn" data-plan-clear>очистить</button></div>
+            <ul class="plan__list" data-plan><li class="plan__empty">Пока пусто</li></ul>
+            <div class="plan__total"><span>Итого</span><b data-plan-total>0 ₽</b></div>
+            <a href="#book" class="btn btn--green btn--block" data-plan-send>Записаться с этим планом</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Отбеливание -->
+    <section class="section section--ink" id="whitening">
+      <div class="white__grid">
+        <div>
+          <p class="kicker kicker--light">02 · Отбеливание</p>
+          <h2 class="h2 reveal">Какой у вас <span class="mark mark--sun">оттенок?</span></h2>
+          <p class="lead lead--light">Подвиньте ползунок к своему цвету зубов по шкале VITA — покажем, какой будет улыбка после отбеливания.</p>
+          <div class="shade">
+            <div class="shade__scale" data-shade-scale></div>
+            <input type="range" class="shade__range" data-shade aria-label="Оттенок зубов">
+          </div>
+          <div class="shade__result">
+            <div><small>Сейчас</small><b data-shade-now>A3</b></div>
+            <span class="shade__arrow">→</span>
+            <div><small>После</small><b data-shade-after>A1</b></div>
+            <div class="shade__diff"><b data-shade-diff>8</b><small>тонов светлее</small></div>
+          </div>
+          <p class="shade__price">Отбеливание Philips Zoom — <b data-white-price></b></p>
+        </div>
+        <div class="smiles">
+          <figure class="smile-fig"><svg viewBox="0 0 320 170" class="smile-svg" data-smile="now"></svg><figcaption>Сейчас</figcaption></figure>
+          <figure class="smile-fig smile-fig--after"><svg viewBox="0 0 320 170" class="smile-svg" data-smile="after"></svg><figcaption>После ✦</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Услуги -->
+    <section class="section" id="services">
+      <header class="head">
+        <p class="kicker">03 · Услуги</p>
+        <h2 class="h2 reveal">Всё для улыбки <span class="mark">в одной клинике</span></h2>
+      </header>
+      <div class="services" data-services></div>
+    </section>
+
+    <!-- 6. Рассрочка -->
+    <section class="section section--mint">
+      <div class="credit__grid">
+        <div>
+          <p class="kicker">04 · Рассрочка</p>
+          <h2 class="h2 reveal">Лечитесь сейчас — <span class="mark mark--white">платите частями</span></h2>
+          <p class="lead" data-inst-note></p>
+        </div>
+        <div class="calc">
+          <label class="calc__label" for="inst">Стоимость лечения</label>
+          <output class="calc__sum" data-inst-sum></output>
+          <input type="range" id="inst" class="calc__range" data-inst>
+          <div class="calc__months" role="radiogroup" aria-label="Срок рассрочки" data-inst-months></div>
+          <div class="calc__pay"><span>В месяц</span><b data-inst-pay></b><small>0% переплаты</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Первый визит -->
+    <section class="section visit">
+      <header class="head">
+        <p class="kicker">05 · Первый визит</p>
+        <h2 class="h2 reveal">50 минут, <span class="mark">которые всё изменят</span></h2>
+      </header>
+      <ol class="visit__line" data-visit></ol>
+    </section>
+
+    <!-- 8. Врачи -->
+    <section class="section" id="doctors">
+      <header class="head">
+        <p class="kicker">06 · Врачи</p>
+        <h2 class="h2 reveal">Врачи, к которым <span class="mark">не страшно</span></h2>
+      </header>
+      <div class="doctors" data-doctors></div>
+      <div class="clinic" data-gallery></div>
+    </section>
+
+    <!-- 9. Отзывы: 3D-барабан -->
+    <section class="section section--ink reviews">
+      <header class="head head--center">
+        <p class="kicker kicker--light">07 · Отзывы</p>
+        <h2 class="h2 reveal">Улыбки наших <span class="mark mark--sun">пациентов</span></h2>
+      </header>
+      <div class="drum" data-drum>
+        <div class="drum__ring" data-ring></div>
+      </div>
+      <div class="drum__nav"><button data-drum-prev aria-label="Предыдущий">←</button><button data-drum-next aria-label="Следующий">→</button></div>
+    </section>
+
+    <!-- 10. FAQ -->
+    <section class="section">
+      <div class="faq__grid">
+        <header>
+          <p class="kicker">08 · Вопросы</p>
+          <h2 class="h2 reveal">Частые <span class="mark">вопросы</span></h2>
+        </header>
+        <div class="accordion" data-faq></div>
+      </div>
+    </section>
+
+    <!-- 11. Запись -->
+    <section class="section book" id="book">
+      <div class="book__card">
+        <div class="book__text">
+          <h2 class="h2 h2--xl reveal">Бесплатная консультация + 3D-снимок</h2>
+          <p class="lead">Оставьте заявку — подберём удобное время и напомним о визите за день.</p>
+          <ul class="book__list"><li>План лечения за один визит</li><li>Фиксированная смета в договоре</li><li>Рассрочка 0%</li></ul>
+        </div>
+        <form class="form" novalidate data-form>
+          <p class="form__label">Что вас беспокоит?</p>
+          <div class="reasons" data-reasons></div>
+          <label class="field"><input name="name" required autocomplete="name" placeholder=" "><span>Имя</span></label>
+          <label class="field"><input name="phone" type="tel" required autocomplete="tel" inputmode="tel" placeholder=" "><span>Телефон</span></label>
+          <label class="field"><textarea name="comment" rows="2" placeholder=" " data-comment></textarea><span>Комментарий</span></label>
+          <label class="check"><input type="checkbox" name="agree" checked required><span>Согласен(на) с <button type="button" class="link-btn" data-open-policy>политикой обработки данных</button></span></label>
+          <button class="btn btn--green btn--block" type="submit">Записаться бесплатно <i class="arr">→</i></button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- 12. Контакты -->
+    <section class="section contacts" id="contacts">
+      <div class="contacts__grid">
+        <div>
+          <p class="kicker">09 · Контакты</p>
+          <h2 class="h2 h2--md reveal" data-address></h2>
+          <dl class="hours" data-hours></dl>
+          <a class="contacts__phone" data-phone></a>
+          <div class="socials" data-socials></div>
+          <a class="ulink" data-map-link target="_blank" rel="noopener">Построить маршрут ↗</a>
+        </div>
+        <div class="map" data-map></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Подвал: улыбающееся лицо, которое следит за курсором -->
+  <footer class="footer" data-footer>
+    <div class="footer__face" aria-hidden="true">
+      <svg viewBox="0 0 1200 420" class="face-svg" preserveAspectRatio="xMidYMid meet">
+        <g class="fe" data-eye="l"><circle cx="420" cy="130" r="56" class="fe__white"/><circle cx="420" cy="130" r="24" class="fe__pupil"/></g>
+        <g class="fe" data-eye="r"><circle cx="780" cy="130" r="56" class="fe__white"/><circle cx="780" cy="130" r="24" class="fe__pupil"/></g>
+        <path class="fsmile" data-fsmile d="M260 260 Q600 300 940 260"/>
+        <g class="fteeth" data-fteeth></g>
+      </svg>
+    </div>
+    <p class="footer__phrase" data-phrase></p>
+    <nav class="footer__teeth" aria-label="Разделы">
+      <a href="#map">Карта</a><a href="#whitening">Отбеливание</a><a href="#services">Услуги</a><a href="#doctors">Врачи</a><a href="#book">Запись</a><a href="#contacts">Контакты</a>
+    </nav>
+    <div class="footer__info">
+      <div class="footer__brand"><b data-brand></b><small data-tagline></small></div>
+      <div><a data-phone class="footer__phone"></a><p data-f-address></p></div>
+      <div><p data-legal></p><p data-license></p></div>
+      <div class="footer__links">
+        <button type="button" class="link-btn" data-open-policy>Политика конфиденциальности</button>
+        <button type="button" class="link-btn" data-open-cookies>Настройки cookie</button>
+        <p>© <span data-year></span> <span data-brand></span></p>
+      </div>
+    </div>
+    <p class="footer__warn">Имеются противопоказания. Необходима консультация специалиста.</p>
+    <a class="footer__credit" data-credit target="_blank" rel="noopener"></a>
+  </footer>
+
+  <a href="#book" class="fab">Бесплатная консультация</a>
+
+  <!-- Cookie -->
+  <div class="cookie" role="dialog" aria-label="Использование cookie" hidden>
+    <p>Мы используем cookie — так сайт работает быстрее и удобнее. <button type="button" class="link-btn" data-open-policy>Подробнее</button></p>
+    <div class="cookie__actions">
+      <button class="btn btn--sm btn--soft" data-cookie="essential">Только нужные</button>
+      <button class="btn btn--sm btn--green" data-cookie="all">Хорошо</button>
+    </div>
+  </div>
+
+  <!-- Политика -->
+  <dialog class="policy">
+    <button class="policy__close" aria-label="Закрыть">×</button>
+    <h3>Политика конфиденциальности</h3>
+    <p>Оставляя заявку, вы соглашаетесь на обработку имени и телефона для записи на приём (152-ФЗ «О персональных данных»). Данные не передаются третьим лицам.</p>
+    <p>Сайт использует cookie: необходимые — для работы сайта и запоминания выбора; аналитические — только с вашего согласия. Изменить выбор можно в подвале сайта, «Настройки cookie».</p>
+  </dialog>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
