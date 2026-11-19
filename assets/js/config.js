@@ -150,6 +150,6 @@ window.SITE = {
   footer: {
     phrase: "Улыбнитесь — вы прекрасны",
     legal: "ООО «Мята», ИНН 0000000000",
-    credit: { text: "Сайт разработан в студии Сайтика", url: "https://studio-psi-olive.vercel.app/" },
+    credit: { text: "Сайт разработан в студии Сайтика", url: "https://xn----8sbanucgj0ddhgg4o.xn--p1ai/" },
   },
 };
